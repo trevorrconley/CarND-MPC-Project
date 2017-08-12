@@ -22,7 +22,7 @@ Self-Driving Car Engineer Nanodegree Program
   * cte was predicted based on the current cte as well as velocity, error in psi, and the latency; ```pred_cte = cte + v * sin(epsi) * dt```
   * epsi was predicted using the current epsi with velocity, steering angle, the car's center of gravity, and the latency (this would also initially be 0 due to starting with epsi = 0 and the velocity and steering angles equal to 0) ```pred_epsi = epsi + v * -delta / Lf * dt```
  * The equations that I used were all equations given from the video tutorial, however, I did change some of the weights. I noticed that with the current weight on the steering angle, the car got very close to going off the road on the curve coming off the bridge. I made that a little bit higher so turns could be a little bit sharper. I notice that because of this the speed of the vehicle slows down more, but the vechile staying on the road is more important than how fast it gets around the track. 
- * The final points are then put into polyeval() which ends up creating a best fit 3rd degree polynomial for the waypoints, and then are plotted to the track. The given waypoints are drawn in yellow while the ones for the car's path are drawn in green. A final video of a lap around the track can be seen [here](CarND-MPC-Project-Lap.mov)
+ * The final points are then put into ```polyeval()``` which ends up creating a best fit 3rd degree polynomial for the waypoints, and then are plotted to the track. The given waypoints are drawn in yellow while the ones for the car's path are drawn in green. A final video of a lap around the track can be seen [here](CarND-MPC-Project-Lap.mov)
  
  
 ---
